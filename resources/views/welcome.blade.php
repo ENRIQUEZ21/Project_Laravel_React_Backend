@@ -29,7 +29,7 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <x-slot name="logo">
                         <a href="/">
-                            <x-application-logo class="w-40 h-40 fill-current text-orange-500" />
+                            <x-application-logo class="w-40 h-40 fill-current text-blue-500" />
                         </a>
                     </x-slot>
                     @if (Route::has('login'))
