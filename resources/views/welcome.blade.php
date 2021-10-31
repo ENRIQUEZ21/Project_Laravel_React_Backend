@@ -31,7 +31,7 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     @if (Route::has('login'))
                         <div class="p-6">
-                            <p><a href="/">
+                            <p class="text-gray-700"><a href="/">
                                     <i class="fa fa-cutlery"></i>
                                 </a></p>
                             @auth
