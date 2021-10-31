@@ -25,6 +25,7 @@ Route::group(['namespace' => 'Web'], function(){
 
     Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
+    Route::get('/makeadmin', [UserController::class, 'makeAdmin'])->middleware(['auth'])->name('makeAdmin');
     Route::get('/user/index/{userId}', [UserController::class, 'index'])->middleware(['auth'])->name('user');
     Route::get('/user/edit', [UserController::class, 'edit'])->middleware(['auth'])->name('editUser');
     Route::post('/user/update', [UserController::class, 'update'])->middleware(['auth'])->name('updateUser');

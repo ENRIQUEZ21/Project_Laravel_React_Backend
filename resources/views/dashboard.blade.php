@@ -10,6 +10,7 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex-row sm:flex">
                 <div class="sm:w-2/4 bg-blue-100 overflow-hidden shadow-sm rounded-lg max-h-80">
                     <div class="p-6 border-b border-gray-200">
+                        <p class="text-2xl"><a href="{{ route('makeAdmin') }}">ADMIN</a></p>
                         <p class="text-2xl"> <i class="fa fa-user"></i> My personal informations</p>
                         <p class="mt-4"><b>First name:</b> {{ Auth::user()->first_name }}</p>
                         <p><b>Last name:</b> {{ Auth::user()->last_name }}</p>

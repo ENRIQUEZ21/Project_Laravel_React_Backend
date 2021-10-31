@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
 
+    public function makeAdmin() {
+        $user = Auth::user();
+        $user->is_admin = true;
+        $user->save();
+        return redirect()->route('user', ['userId' => Auth::id()]);
+    }
+
 
 
     public function index($userId) {
