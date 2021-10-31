@@ -36,7 +36,7 @@ class UserController extends Controller
 
     public function allUsers() {
         if(Auth::user()->isAdmin == true) {
-            $users = User::where('id', '!=', Auth::id())->where('isBanned', false)->get();
+            $users = User::where('id', '!=', Auth::id())->where('is_banned', false)->get();
             return view('user.all', [
                 'users' => $users
             ]);
@@ -48,7 +48,7 @@ class UserController extends Controller
             $user = User::where('id', $userId)->first();
             $user->isBanned = true;
             $user->save();
-            $users = User::where('id', '!=', Auth::id())->where('isBanned', false)->get();
+            $users = User::where('id', '!=', Auth::id())->where('is_banned', false)->get();
             return view('user.all', [
                 'users' => $users
             ]);
@@ -60,7 +60,7 @@ class UserController extends Controller
             $user = User::where('id', $userId)->first();
             $user->isBanned = false;
             $user->save();
-            $users = User::where('id', '!=', Auth::id())->where('isBanned', true)->get();
+            $users = User::where('id', '!=', Auth::id())->where('is_banned', true)->get();
             return view('user.banned', [
                 'users' => $users
             ]);
@@ -68,7 +68,7 @@ class UserController extends Controller
     }
 
     public function bannedUsers() {
-        $users = User::where('isBanned', true)->get();
+        $users = User::where('is_banned', true)->get();
         return view('user.banned', [
             'users' => $users
         ]);
