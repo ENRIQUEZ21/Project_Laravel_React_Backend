@@ -14,16 +14,16 @@
 
             <!-- First Name -->
             <div>
-                <x-label for="firstName" :value="__('First Name')" />
+                <x-label for="first_name" :value="__('First Name')" />
 
-                <x-input id="firstName" class="block mt-1 w-full" type="text" name="firstName" :value="old('firstName')" required autofocus />
+                <x-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('firstName')" required autofocus />
             </div>
 
             <!-- Last Name -->
             <div>
-                <x-label for="lastName" :value="__('Last Name')" />
+                <x-label for="last_name" :value="__('Last Name')" />
 
-                <x-input id="lastName" class="block mt-1 w-full" type="text" name="lastName" :value="old('lastName')" required autofocus />
+                <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('lastName')" required autofocus />
             </div>
 
             <!-- Email Address -->
