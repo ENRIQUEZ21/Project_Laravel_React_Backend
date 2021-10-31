@@ -27,10 +27,15 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+                    <x-slot name="logo">
+                        <a href="/">
+                            <x-application-logo class="w-40 h-40 fill-current text-orange-500" />
+                        </a>
+                    </x-slot>
                     @if (Route::has('login'))
                         <div class="p-6">
                             @auth
-                                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-200 underline">Dashboard</a>
+                                <p class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl"><a href="{{ url('/dashboard') }}">Dashboard</a></p>
                             @else
                                 <p><a href="{{ route('login') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Log in</a>
 
