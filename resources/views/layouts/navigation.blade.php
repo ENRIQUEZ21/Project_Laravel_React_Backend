@@ -10,7 +10,7 @@
                     </a>
                 </div>
 
-                @if(\Illuminate\Support\Facades\Auth::user()->isBanned != true)
+                @if(\Illuminate\Support\Facades\Auth::user()->is_banned != true)
                     <!-- Navigation Links -->
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
@@ -30,7 +30,7 @@
                         </x-nav-link>
                     </div>
 
-                    @if(\Illuminate\Support\Facades\Auth::user()->isAdmin == true)
+                    @if(\Illuminate\Support\Facades\Auth::user()->is_admin == true)
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-nav-link :href="route('allUsers')" :active="request()->routeIs('allUsers')">
                             {{ __('All users') }}
@@ -45,7 +45,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                            <div>{{ Auth::user()->firstName }} {{ Auth::user()->lastName }}</div>
+                            <div>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</div>
 
                             <div class="ml-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
