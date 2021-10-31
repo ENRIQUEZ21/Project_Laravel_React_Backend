@@ -28,9 +28,9 @@
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <h1 class="text-center">French Gastronomy</h1>
                     @if (Route::has('login'))
                         <div class="p-6">
+                            <h1 class="text-center">French Gastronomy</h1>
                             @auth
                                 <p class="text-center mt-8"><a class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl" href="{{ url('/dashboard') }}">Dashboard</a></p>
                             @else
