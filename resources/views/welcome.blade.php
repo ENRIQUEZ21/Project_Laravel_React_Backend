@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
 
         <!-- Styles -->
         <style>
@@ -30,11 +31,11 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     @if (Route::has('login'))
                         <div class="p-6">
-                            <h1 class="text-center text-4xl"><i class="fa fa-cutlery"></i>French Gastronomy</h1>
+                            <h1 class="text-center text-4xl py-12"><i class="fa fa-cutlery" />French Gastronomy</h1>
                             @auth
-                                <p class="text-center mt-8"><a class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl" href="{{ url('/dashboard') }}">Dashboard</a></p>
+                                <p class="text-center py-12 mt-8"><a class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl" href="{{ url('/dashboard') }}">Dashboard</a></p>
                             @else
-                                <p class="text-center mt-8"><a href="{{ route('login') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Log in</a>
+                                <p class="text-center py-12 mt-8"><a href="{{ route('login') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Log in</a>
 
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Register</a>
