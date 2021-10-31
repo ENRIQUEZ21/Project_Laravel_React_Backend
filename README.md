@@ -11,5 +11,5 @@
 http://localhost/frenchGastronomy/public/
 
 The website is disponible in the net in the adress: 
-http://french-cooking.herokuapp.com/
+https://french-gastronomy.herokuapp.com/
 You can log in it after being registrated.
