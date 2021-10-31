@@ -20,7 +20,7 @@
             <tbody>
             @foreach($users as $user)
                 <tr class="text-center">
-                    <td><b>{{ $user->firstName }} {{ $user->lastName }}</b></td>
+                    <td><b>{{ $user->first_name }} {{ $user->last_name }}</b></td>
                     <td class="text-2xl"><p><a class="rounded-lg bg-blue-600 text-white px-2" href="{{ route('user', ['userId' => $user->id]) }}"><i class="fa fa-eye"></i></a></p></td>
                     <td class="text-2xl"><p><a class="rounded-lg bg-yellow-600 text-white px-2" href="{{ route('allRecipes', ['userId' => $user->id]) }}"><i class="fa fa-cutlery"></i></a></p></td>
                     <td class="text-2xl"><p><a class="rounded-lg bg-green-600 text-white px-2" href="{{ route('restoreUser', ['userId' => $user->id]) }}"><i class="fa fa-check"></i></a></p></td>

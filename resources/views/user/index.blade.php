@@ -7,8 +7,8 @@
     <p class="text-3xl text-center py-12"><i class="fa fa-user"></i>Profile</p>
     <div class="text-center flex-row sm:flex">
         <div class="sm:w-2/4 bg-yellow-100 rounded-lg ml-4 mr-4">
-            <p class="py-6 text-xl"><b>First name: </b>{{ $user->firstName }}</p>
-            <p class="py-6 text-xl"><b>Last name: </b>{{ $user->lastName }}</p>
+            <p class="py-6 text-xl"><b>First name: </b>{{ $user->first_name }}</p>
+            <p class="py-6 text-xl"><b>Last name: </b>{{ $user->last_name }}</p>
             <p class="py-6 text-xl"><b>Email: </b>{{ $user->email }}</p>
         </div>
         <div class="sm:w-2/4 ml-4 mr-4 bg-yellow-100 rounded-lg">
