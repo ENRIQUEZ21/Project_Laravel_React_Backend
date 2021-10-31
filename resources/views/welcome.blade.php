@@ -29,8 +29,8 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     @if (Route::has('login'))
                         <div class="p-6">
-                            <p class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl"><a href="/">
-                                    <i class="fa fa-cutlery"></i>
+                            <p><a href="/">
+                                    <i class="fa fa-cutlery rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl"></i>
                                 </a></p>
                             @auth
                                 <p class="text-center mt-8"><a class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl" href="{{ url('/dashboard') }}">Dashboard</a></p>
