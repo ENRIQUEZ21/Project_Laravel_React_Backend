@@ -28,7 +28,7 @@
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <h1 class="sm:h-20">French Gastronomy</h1>
+                    <h1 class="text-center">French Gastronomy</h1>
                     @if (Route::has('login'))
                         <div class="p-6">
                             @auth
