@@ -2,6 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.text-red-600 {
+.text-red {
     color: indianred;
+}
+.text-green {
+    color: darkolivegreen;
 }
