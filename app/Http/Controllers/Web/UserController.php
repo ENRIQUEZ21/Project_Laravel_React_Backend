@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
 
-    public function makeAdmin() {
+    /*public function makeAdmin() {
         $user = Auth::user();
         $user->is_admin = true;
         $user->save();
         return redirect()->route('user', ['userId' => Auth::id()]);
-    }
+    }*/
 
 
 
@@ -42,7 +42,7 @@ class UserController extends Controller
     }
 
     public function allUsers() {
-        if(Auth::user()->isAdmin == true) {
+        if(Auth::user()->is_admin == true) {
             $users = User::where('id', '!=', Auth::id())->where('is_banned', false)->get();
             return view('user.all', [
                 'users' => $users
@@ -51,9 +51,9 @@ class UserController extends Controller
     }
 
     public function banUser($userId) {
-        if(Auth::user()->isAdmin == true) {
+        if(Auth::user()->is_admin == true) {
             $user = User::where('id', $userId)->first();
-            $user->isBanned = true;
+            $user->is_banned = true;
             $user->save();
             $users = User::where('id', '!=', Auth::id())->where('is_banned', false)->get();
             return view('user.all', [
@@ -63,9 +63,9 @@ class UserController extends Controller
     }
 
     public function restoreUser($userId) {
-        if(Auth::user()->isAdmin == true) {
+        if(Auth::user()->is_admin == true) {
             $user = User::where('id', $userId)->first();
-            $user->isBanned = false;
+            $user->is_banned = false;
             $user->save();
             $users = User::where('id', '!=', Auth::id())->where('is_banned', true)->get();
             return view('user.banned', [
