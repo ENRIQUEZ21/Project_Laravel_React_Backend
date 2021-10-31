@@ -30,7 +30,7 @@
                     @if (Route::has('login'))
                         <div class="p-6">
                             <p><a href="/">
-                                    <i class="fa fa-cutlery rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl"></i>
+                                    <i class="fa fa-cutlery"></i>
                                 </a></p>
                             @auth
                                 <p class="text-center mt-8"><a class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl" href="{{ url('/dashboard') }}">Dashboard</a></p>
