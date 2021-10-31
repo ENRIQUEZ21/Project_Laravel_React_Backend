@@ -31,7 +31,7 @@
                             @auth
                                 <a href="{{ url('/dashboard') }}" class="text-sm text-gray-200 underline">Dashboard</a>
                             @else
-                                <a href="{{ route('login') }}" class="rounded-lg bg-blue-600 text-white px-2">Log in</a>
+                                <td class="text-2xl"><p><a href="{{ route('login') }}" class="rounded-lg bg-blue-600 text-white px-2">Log in</a></p></td>
 
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="ml-4 text-sm text-red underline">Register</a>
