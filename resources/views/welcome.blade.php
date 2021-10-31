@@ -32,10 +32,10 @@
                             @auth
                                 <a href="{{ url('/dashboard') }}" class="text-sm text-gray-200 underline">Dashboard</a>
                             @else
-                                <a href="{{ route('login') }}" class="rounded-lg bg-red-600 text-white px-4 py-4 text-3xl">Log in</a>
+                                <p><a href="{{ route('login') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Log in</a></p>
 
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="ml-4 text-sm text-red underline">Register</a>
+                                    <p><a href="{{ route('register') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Register</a></p>
                                 @endif
                             @endauth
                         </div>
