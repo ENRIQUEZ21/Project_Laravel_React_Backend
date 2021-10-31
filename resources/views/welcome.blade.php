@@ -30,7 +30,7 @@
                     @if (Route::has('login'))
                         <div class="p-6">
                             <a href="/">
-                                <x-application-logo class="ml-4 w-40 h-40 fill-current text-blue-500" />
+                                <x-application-logo class="ml-100 w-40 h-40 fill-current text-blue-500" />
                             </a>
                             @auth
                                 <p class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl"><a href="{{ url('/dashboard') }}">Dashboard</a></p>
