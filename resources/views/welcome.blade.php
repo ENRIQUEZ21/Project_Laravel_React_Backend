@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>French Gastronomy</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,9 +21,44 @@
                 font-family: 'Nunito', sans-serif;
             }
             .welcome-page {
-                background-image: url("{{ asset('images/FrenchGastronomyMap.jpg') }}");
+                background-image: url("{{ asset('images/FrenchGastronomy.jpg') }}");
                 background-repeat: no-repeat;
                 background-size: 100%;
+                -webkit-animation-name: diapo1;
+                -webkit-animation-duration: 15s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-direction: normal;
+                -webkit-transition: none !important;
+
+                -moz-animation-name: diapo1;
+                -moz-animation-duration: 9s;
+                -moz-animation-timing-function: linear;
+                -moz-animation-iteration-count: infinite;
+                -moz-animation-direction: normal;
+                -moz-transition: none !important;
+
+                animation-name: diapo1;
+                animation-duration: 9s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+                transition: none !important;
+            }
+            @-webkit-keyframes diapo1 {
+                0%{background-image: url("{{ asset('images/FrenchGastronomy.jpg') }}");}
+                33%{background-image: url("{{ asset('images/FrenchGastronomyMap.jpg') }}");}
+                67%{background-image: url("{{ asset('images/FrenchGastronomyFood.jpg') }}");}
+            }
+            @-moz-keyframes diapo1 {
+                0%{background-image: url("{{ asset('images/FrenchGastronomy.jpg') }}");}
+                33%{background-image: url("{{ asset('images/FrenchGastronomyMap.jpg') }}");}
+                67%{background-image: url("{{ asset('images/FrenchGastronomyFood.jpg') }}");}
+            }
+            @keyframes diapo1 {
+                0%{background-image: url("{{ asset('images/FrenchGastronomy.jpg') }}");}
+                33%{background-image: url("{{ asset('images/FrenchGastronomyMap.jpg') }}");}
+                67%{background-image: url("{{ asset('images/FrenchGastronomyFood.jpg') }}");}
             }
             h1 {
                 font-weight: bold;
