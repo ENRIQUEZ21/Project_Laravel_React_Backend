@@ -20,27 +20,41 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            .welcome-page {
+                background-image: url("{{ asset('images/FrenchGastronomyMap.jpg') }}");
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            h1 {
+                font-weight: bold;
+            }
+            @media  only screen and (min-width:800px) {
+                .welcome-page {
+                    background-size: 100% 100%;
+                }
+
+            }
         </style>
     </head>
     <body class="antialiased">
 
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="relative flex welcome-page items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     @if (Route::has('login'))
                         <div class="p-6">
-                            <h1 class="text-center text-4xl py-12"><i class="fa fa-cutlery"></i>French Gastronomy</h1>
+                            <h1 class="text-center text-5xl py-4 bg-gray-100" ><i class="fa fa-cutlery"></i>French Gastronomy</h1>
                             @auth
                                 <p class="text-center py-12 mt-8"><a class="rounded-lg bg-blue-600 text-white px-8 py-4 text-3xl" href="{{ url('/dashboard') }}">Dashboard</a></p>
                             @else
-                                <p class="text-center py-12 mt-8"><a href="{{ route('login') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Log in</a>
+                                <p class="text-center py-12 mt-8 w-2/5"><div class="text-center py-12"><a href="{{ route('login') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Log in</a></div>
 
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Register</a>
+                                    <div class="text-center py-12"><a href="{{ route('register') }}" class="rounded-lg bg-green-600 text-white px-8 py-4 text-3xl">Register</a></div></p>
                                 @endif
-                                </p>
+                                </div>
                             @endauth
                         </div>
                     @endif
