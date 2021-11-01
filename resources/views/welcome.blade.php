@@ -25,21 +25,21 @@
                 background-repeat: no-repeat;
                 background-size: 100%;
                 -webkit-animation-name: diapo1;
-                -webkit-animation-duration: 15s;
+                -webkit-animation-duration: 30s;
                 -webkit-animation-timing-function: linear;
                 -webkit-animation-iteration-count: infinite;
                 -webkit-animation-direction: normal;
                 -webkit-transition: none !important;
 
                 -moz-animation-name: diapo1;
-                -moz-animation-duration: 9s;
+                -moz-animation-duration: 30s;
                 -moz-animation-timing-function: linear;
                 -moz-animation-iteration-count: infinite;
                 -moz-animation-direction: normal;
                 -moz-transition: none !important;
 
                 animation-name: diapo1;
-                animation-duration: 9s;
+                animation-duration: 30s;
                 animation-timing-function: linear;
                 animation-iteration-count: infinite;
                 animation-direction: normal;
@@ -62,6 +62,12 @@
             }
             h1 {
                 font-weight: bold;
+            }
+            @media only screen and (max-width: 800px) {
+                .welcome-page {
+                    background-size: 100% 40%;
+                }
+
             }
             @media  only screen and (min-width:800px) {
                 .welcome-page {
